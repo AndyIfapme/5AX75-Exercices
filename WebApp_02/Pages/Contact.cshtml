@@ -1,0 +1,30 @@
+﻿@page
+@model WebApp_02.Pages.ContactModel
+@{
+}
+
+<h1>Contactez-nous !</h1>
+
+<form method="post">
+    <div class="mb-3">
+        <label asp-for="Contact.Email" class="form-label">Email</label>
+        <input type="email" class="form-control" asp-for="Contact.Email" placeholder="name@example.com" >
+        <span asp-validation-for="Contact.Email" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Contact.Subject" class="form-label">Sujet</label>
+        <input type="text" 
+               asp-for="Contact.Subject"
+               class="form-control" 
+               placeholder="Votre sujet...">
+        <span asp-validation-for="Contact.Subject" class="text-danger"></span>
+
+    </div>
+    <div class="mb-3">
+        <label asp-for="Contact.Message" class="form-label">Votre message</label>
+        <textarea class="form-control" asp-for="Contact.Message" rows="3"></textarea>
+        <span asp-validation-for="Contact.Message" class="text-danger"></span>
+
+    </div>
+    <button type="submit" class="btn btn-primary">Envoyer</button>
+</form>

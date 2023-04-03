@@ -1,0 +1,14 @@
+﻿@page
+@model WebApp_02.WebApp.Pages.ContactListModel
+@{
+}
+
+<h1>Liste des demandes de contacts</h1>
+
+@foreach (var contact in @Model.Contacts)
+{
+    <p>@contact.Email</p>
+    <p>@contact.Subject</p>
+    <p>@contact.Message</p>
+    <hr>
+}
